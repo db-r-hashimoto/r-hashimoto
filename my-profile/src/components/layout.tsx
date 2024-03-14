@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Box, Heading, HStack, Text, Spacer } from "@chakra-ui/react";
-import DrawerMenu from "../components/menu";
+import DrawerMenu from "./menu";
+import { MDXProvider } from "@mdx-js/react";
 
 const Layout = (props: any) => {
   const pageTitle = props.pageTitle;
@@ -21,7 +22,6 @@ const Layout = (props: any) => {
 
   return (
     <Box
-      bgColor="gray.900"
       alignContent="center"
       height="2000px"
       paddingTop="24px"
@@ -30,30 +30,31 @@ const Layout = (props: any) => {
       <header>
         <HStack spacing="12px">
           <DrawerMenu />
-          <Heading textColor="yellow.500" fontWeight="bold">
+          <Heading textColor="blue.800" fontWeight="bold">
             {data.site.siteMetadata.title}
           </Heading>
         </HStack>
       </header>
       <main>
         <Box paddingTop="12px" paddingLeft="60px">
-          <HStack alignItems="start" spacing="2">
-            <Text textColor="gray.200" fontSize="2xl">{pageTitle || "Home"}</Text>
-            {children}
-          </HStack>
+          <Text textColor="gray.900" fontSize="2xl">
+            {pageTitle || "Home"}
+          </Text>
+          <MDXProvider>{children}</MDXProvider>
         </Box>
       </main>
       <footer>
         <Box
+          alignContent="center"
           justifyContent="center"
           display="flex"
           marginTop="24px"
           paddingRight="48px"
           borderTop="solid"
-          borderColor="gray.200"
-          width="full"
+          borderColor="gray.500"
+          width="99%"
         >
-          <Text color="gray.100" as="kbd" size="sm" paddingTop="24px">
+          <Text color="gray.600" as="kbd" size="xs" paddingTop="24px">
             © {thisYear} db-r-hashimoto. All rights reserved.
           </Text>
         </Box>

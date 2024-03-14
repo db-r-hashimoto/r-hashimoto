@@ -15,7 +15,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
 
 const HoverLink = (props: LinkProps) => (
-  <Link rounded="base" _hover={{ bg: "gray.500" }} p={2} {...props} />
+  <Link rounded="base" _hover={{ bg: "blue.300" }} p={2} {...props} />
 );
 
 const DrawerMenu = () => {
@@ -26,13 +26,8 @@ const DrawerMenu = () => {
   return (
     <>
       {/* ハンバーガーアイコン部分 */}
-      <Button
-        ref={btnRef}
-        onClick={onOpen}
-        bgColor="gray.900"
-        _hover={{ bg: "gray.600" }}
-      >
-        <HamburgerIcon color="gray.200" />
+      <Button ref={btnRef} onClick={onOpen} _hover={{ bg: "gray.400" }}>
+        <HamburgerIcon color="gray.900" />
       </Button>
       {/* Drawer部分 */}
       <Drawer
@@ -43,7 +38,7 @@ const DrawerMenu = () => {
         size="xs"
       >
         <DrawerOverlay>
-          <DrawerContent bgColor="blue.700" textColor="gray.200">
+          <DrawerContent bgColor="blue.100" textColor="gray.800">
             <DrawerCloseButton />
             <DrawerHeader fontSize="xl">Menu</DrawerHeader>
             <DrawerBody fontSize="lg">
