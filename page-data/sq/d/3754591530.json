@@ -1,0 +1,1 @@
+{"data":{"allMdx":{"nodes":[{"frontmatter":{"title":"Hello, world!","slug":"/about","date":"January 29, 2019"},"body":"\nimport { Text, Heading, Box } from \"@chakra-ui/react\"\n\n<Box bgColor=\"gray.900\">\n  <Heading textColor=\"gray.200\">!</Heading>\n</Box>"}]}}}
