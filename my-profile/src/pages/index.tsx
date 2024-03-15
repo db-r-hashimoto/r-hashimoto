@@ -22,7 +22,11 @@ export default IndexPage;
 export const Head: HeadFC = () => {
   return (
     <>
-      <Header language="ja" title="Portfolio" description="test" />
+      <Header
+        language="ja"
+        title="db-r-hashimoto's Portfolio"
+        description="db-r-hashimoto's Portfolio"
+      />
       <title>Home</title>
     </>
   );

@@ -10,11 +10,12 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "format": "bunx prettier -w **/*.{tsx,ts,mdx}"
+    "format": "bunx prettier -w **/*.{tsx,ts,mdx}",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^3.1.3",
@@ -26,7 +27,9 @@
     "framer-motion": "^11.0.12",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "prettier": "^3.2.5",
@@ -37,6 +40,7 @@
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "update-browserslist-db": "latest"
   }
 }

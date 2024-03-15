@@ -2,22 +2,31 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `My Profile`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `db-r-hashimoto's Portfolio`,
+    siteUrl: `https://db-r-hashimoto.github.io/r-hashimoto/`
   },
+  pathPrefix: `/r-hashimoto`,
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-mdx", 
+    "gatsby-plugin-mdx",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
+        "name": "contents",
+        "path": "./src/contents/"
       },
-      __key: "pages"
+      __key: "contents"
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `images`,
+        path: `./src/images`,
+      },
+      __key: "images"
     },
     {
       resolve: '@chakra-ui/gatsby-plugin',
@@ -38,12 +47,20 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `content`,
-        path: `${__dirname}/src/contents`,
+        icon: `./src/images/icon.png`,
+        crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
   ]
 };
 

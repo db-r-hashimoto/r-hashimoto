@@ -13,10 +13,21 @@ import {
 import type { LinkProps } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
+import { Link as Gatsbylink } from "gatsby";
 
-const HoverLink = (props: LinkProps) => (
-  <Link rounded="base" _hover={{ bg: "blue.300" }} p={2} {...props} />
-);
+const HoverLink = (props: LinkProps) => {
+  const url = props.href || "/";
+  return (
+    <Link
+      as={Gatsbylink}
+      rounded="base"
+      _hover={{ bg: "blue.300" }}
+      p={2}
+      to={url}
+      {...props}
+    />
+  );
+};
 
 const DrawerMenu = () => {
   // useDisclosureで閉じ・開きの管理
@@ -45,6 +56,7 @@ const DrawerMenu = () => {
               <Stack as="nav">
                 <HoverLink href="/">Home</HoverLink>
                 <HoverLink href="/about">About</HoverLink>
+                <HoverLink href="/skill">Skill</HoverLink>
               </Stack>
             </DrawerBody>
           </DrawerContent>
