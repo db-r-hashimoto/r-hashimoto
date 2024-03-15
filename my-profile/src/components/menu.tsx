@@ -57,6 +57,7 @@ const DrawerMenu = () => {
                 <HoverLink href="/">Home</HoverLink>
                 <HoverLink href="/about">About</HoverLink>
                 <HoverLink href="/skill">Skill</HoverLink>
+                <HoverLink href="/contact">Contact</HoverLink>
               </Stack>
             </DrawerBody>
           </DrawerContent>

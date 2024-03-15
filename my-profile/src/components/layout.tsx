@@ -42,7 +42,7 @@ const Layout = (props: any) => {
       </header>
       <main>
         <Box paddingTop="12px" paddingLeft="60px">
-          <MDXProvider>{children}</MDXProvider>
+          {children}
         </Box>
       </main>
       <footer>
@@ -60,7 +60,7 @@ const Layout = (props: any) => {
             <Text color="gray.600" as="kbd" fontSize="sm" paddingTop="24px">
               © {thisYear} db-r-hashimoto. All rights reserved.
             </Text>
-            <Box>
+            {/* <Box>
               icon by{" "}
               <Link
                 target="_blank"
@@ -79,7 +79,7 @@ const Layout = (props: any) => {
               >
                 Icons8
               </Link>
-            </Box>
+            </Box> */}
           </VStack>
         </Box>
       </footer>

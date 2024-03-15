@@ -37,35 +37,28 @@ export const age = getAge(birthday);
     <Text width="10%">1994年</Text>
     <Text>誕生（現在：{age}歳）</Text>
   </HStack>
-  <HStack spacing="4" width="800px" paddingLeft="2" marginTop="-2">
-    <Text width="10%">2012年</Text>
-    <Text>
-      首都大学東京（システムデザイン学部航空宇宙システム工学コース） 入学
-    </Text>
-  </HStack>
-  <HStack spacing="4" width="800px" paddingLeft="2" marginTop="-2">
-    <Text width="10%">2017年</Text>
-    <Text>
-      首都大学東京（システムデザイン学部航空宇宙システム工学コース） 卒業
-    </Text>
-  </HStack>
-  <HStack spacing="4" width="800px" paddingLeft="2" marginTop="4">
-    <Text width="10%">2017年</Text>
-    <Text>
-      日本IBMデジタルサービス株式会社（当時は日本IBMサービス株式会社） 新卒入社
-    </Text>
-  </HStack>
-  <HStack spacing="4" width="800px" paddingLeft="2" marginTop="-2">
-    <Text width="10%">2022年</Text>
-    <Text>株式会社デジタルブラスト 中途入社</Text>
-  </HStack>
-  <HStack spacing="4" width="800px" paddingLeft="2" marginTop="-2">
-    <Text width="10%">2023年</Text>
-    <Text>株式会社アクセルスペース 中途入社</Text>
-  </HStack>
-  <Text paddingLeft="8%" paddingTop="2">
-    現在に至る
-  </Text>
+  <Heading fontSize="md" paddingTop="2">
+    やってきたこと
+  </Heading>
+  <UnorderedList paddingLeft="2" spacing="2" fontSize="md">
+    <ListItem>
+      <Text>生産管理アプリケーションの導入・開発</Text>
+      <Text>製造業向けのアプリケーション</Text>
+      <Text>基本的に開発はアプリのインターフェース部分</Text>
+      <Text>SQL、Bash、Python、Javaあたりを駆使してのバックエンド開発</Text>
+      <Text>大体4年くらいやっていて、最後は現場のリーダーも経験した</Text>
+    </ListItem>
+    <ListItem>
+      <Text>社内情報管理アプリケーションの開発</Text>
+      <Text>某クライアントに対して</Text>
+      <Text>React + Python + PostgreSQLのWebアプリケーション</Text>
+      <Text>ホスティング：Firebase</Text>
+      <Text>サーバレス：Cloud Run</Text>
+      <Text>DB：Cloud SQL</Text>
+      <Text>CI/CD：GitHub Actions、Cloud Build</Text>
+      <Text>インフラ構築：Terraform</Text>
+    </ListItem>
+  </UnorderedList>
 </VStack>
 <VStack textColor="gray.900" paddingTop="12" alignItems="start" spacing="2">
   <Heading fontSize="md">HOBBY</Heading>
