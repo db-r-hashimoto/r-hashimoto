@@ -6,12 +6,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "~/styles/tailwind.css";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: "/styles/tailwind.css" }];
 }
 
 export default function App() {
