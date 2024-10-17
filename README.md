@@ -1,62 +1,40 @@
-# Gatsbyを使ってPortfolio作成
-ポートフォリオ：https://db-r-hashimoto.github.io/r-hashimoto/
+# Welcome to Remix!
 
-# 今後やりたいこと
-- レスポンシブ対応
-- 英語対応
-- MDXでの画像の取り扱い
+- 📖 [Remix docs](https://remix.run/docs)
 
-# 参考にさせていただいたサイト
-https://github.com/kzk4043/portfolio
+## Development
 
+Run the dev server:
 
-<br />
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+```shellscript
+npm run dev
+```
 
-## 🚀 Quick start
+## Deployment
 
-1.  **Create a Gatsby site.**
+First, build your app for production:
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+```sh
+npm run build
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+Then run the app in production mode:
 
-2.  **Start developing.**
+```sh
+npm start
+```
 
-    Navigate into your new site’s directory and start it up.
+Now you'll need to pick a host to deploy it to.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### DIY
 
-3.  **Open the code and start customizing!**
+If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-    Your site is now running at http://localhost:8000!
+Make sure to deploy the output of `npm run build`
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+- `build/server`
+- `build/client`
 
-4.  **Learn more**
+## Styling
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.

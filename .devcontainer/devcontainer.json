@@ -1,0 +1,15 @@
+{
+  "name": "Astro Project",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [5173],
+  "postCreateCommand": "npm install -g bun && bun install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
