@@ -20,8 +20,8 @@ jobs:
         run: bun run build
       - name: upload GitHub Artifact
         uses: actions/upload-pages-artifact@v1
-         with:
-           path: build
+        with:
+          path: build
 
   deploy:
     needs: build
