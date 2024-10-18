@@ -4,11 +4,6 @@ export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        primary: "#1a202c",
-        secondary: "#2d3748",
-        background: "#f7fafc",
-      },
       fontFamily: {
         sans: [
           '"Inter"',
@@ -23,5 +18,5 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 } satisfies Config;
