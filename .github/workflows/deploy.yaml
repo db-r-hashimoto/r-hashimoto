@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: bun run build
       - name: upload GitHub Artifact
-        uses: uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v1
          with:
            path: build
 
