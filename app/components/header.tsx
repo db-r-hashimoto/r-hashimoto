@@ -17,12 +17,13 @@ const Header: React.FC = () => {
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/projects", label: "Projects" },
+    { path: "/skills", label: "Skills" },
     { path: "/contact", label: "Contact" },
   ];
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md">
-      <div className="container mx-auto py-4 flex justify-between items-center">
+      <div className="container mx-4 py-4 flex justify-between items-center">
         {/* 左側：ハンバーガーとタイトル */}
         <div className="relative flex items-center space-x-4">
           <button

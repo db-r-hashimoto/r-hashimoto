@@ -55,8 +55,7 @@ export default function Post() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 overflow-visible">
         <h1 className="text-3xl font-bold mb-6">{post.title}</h1>
-        {/* 下部に十分な余白を追加 */}
-        <div className="prose dark:prose-invert max-w-none pb-12">
+        <div className="prose dark:prose-invert max-w-2000 pb-12">
           {post.module()}
         </div>
       </div>

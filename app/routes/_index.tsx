@@ -34,14 +34,17 @@ export default function Profile() {
 
   return (
     <>
-      <div className="mb-4">
-        <ul className="list-disc pl-24 pt-4">
-          {posts.map((post, index) => (
-            <li key={index} className="pt-2">
-              <Link to={`/${post.slug}`}>{post.title}</Link>
-            </li>
-          ))}
-        </ul>
+      <div className="max-w-4xl mx-auto px-4 py-4">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 overflow-visible">
+          <p className="text-2xl font-bold mb-6">Posts</p>
+          <ul className="list-disc pl-4">
+            {posts.map((post, index) => (
+              <li key={index} className="mb-2">
+                <Link to={`/${post.slug}`}>{post.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
