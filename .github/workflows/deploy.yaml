@@ -29,7 +29,8 @@ jobs:
 
       - name: Flatten build folder
         run: |
-          cp -rL build/client build/client_clean
+          # rsyncを使ってシンボリックリンクを実体化（--copy-links オプション）
+          rsync -a --copy-links build/client/ build/client_clean/
           rm -rf build/client
           mv build/client_clean build/client
 
