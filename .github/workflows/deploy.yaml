@@ -27,6 +27,12 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Flatten build folder
+        run: |
+          cp -rL build/client build/client_clean
+          rm -rf build/client
+          mv build/client_clean build/client
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4.6.0
         with:
