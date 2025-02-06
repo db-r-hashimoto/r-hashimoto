@@ -12,7 +12,7 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
-  // base: "/r-hashimoto/",
+  base: "/r-hashimoto/",
   plugins: [
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
