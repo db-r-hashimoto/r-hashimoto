@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
 
-      - name: Use Node.js 18
+      - name: Use Node.js
         uses: actions/setup-node@v4.2.0
         with:
           node-version: 22
@@ -30,10 +30,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4.6.0
         with:
-          name: build/client
+          name: build-client
           path: build/client
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: build/client
+          artifact_name: build-client
