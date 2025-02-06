@@ -1,6 +1,9 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import mdx from "@mdx-js/rollup";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 declare module "@remix-run/node" {
   interface Future {
@@ -9,9 +12,12 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  // base: "/r-hashimoto/",
   plugins: [
+    mdx({
+      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+    }),
     remix({
-      ssr: false,
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
@@ -19,7 +25,14 @@ export default defineConfig({
         v3_singleFetch: true,
         v3_lazyRouteDiscovery: true,
       },
+      ssr: false,
+      basename: "/r-hashimoto/",
     }),
     tsconfigPaths(),
   ],
+  resolve: {
+    alias: {
+      "~": "/app",
+    },
+  },
 });
