@@ -14,18 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.2.2
 
       - name: Use Node.js 18
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4.2.0
         with:
-          node-version: 18
+          node-version: 22
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install -g bun && bun install
 
       - name: Build
-        run: npm run build
+        run: bun run build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
